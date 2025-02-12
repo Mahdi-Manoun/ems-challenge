@@ -31,3 +31,17 @@ CREATE TABLE timesheets (
     employee_id INTEGER NOT NULL,
     FOREIGN KEY (employee_id) REFERENCES employees(id)
 );
+
+
+-- Alterring columns to employees table (commented and executed by terminal)
+-- ALTER TABLE employees ADD COLUMN email TEXT;
+-- ALTER TABLE employees ADD COLUMN phone TEXT;
+-- ALTER TABLE employees ADD COLUMN job_title TEXT;
+-- ALTER TABLE employees ADD COLUMN department TEXT;
+-- ALTER TABLE employees ADD COLUMN salaryValue FLOAT;
+-- ALTER TABLE employees ADD COLUMN start_date DATE;
+-- ALTER TABLE employees ADD COLUMN end_date DATE;
+-- ALTER TABLE employees ADD COLUMN birth_date DATE;
+-- ALTER TABLE employees ADD COLUMN photoPath TEXT;
+-- ALTER TABLE employees ADD COLUMN cvPath TEXT;
+

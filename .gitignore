@@ -7,3 +7,4 @@
 
 # Database
 *.sqlite
+/database.db

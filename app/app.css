@@ -20,6 +20,345 @@ body {
   }
 } */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Global Container Style */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Form Group Style */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Submit Button Style */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Navigation Links Style */
+.navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.navigation li {
+  margin: 0 10px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-size: 1rem;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Employees List Style */
+.employee-list,
+.timesheet-list,
+.timesheet-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.employee-list li,
+.timesheet-list li {
+  margin-bottom: 15px;
+}
+
+.employee-item,
+.timesheet-list {
+  background-color: #fff;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-item h2,
+.timesheet-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.employee-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.employee-item li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Styling for Employee Form & List */
+.container form,
+.container .employee-list,
+.timesheet-info {
+  margin-top: 20px;
+}
+
+.container hr {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+
+.employee-item ul,
+.employee-item ul {
+  margin-left: 20px;
+}
+
+.employee-list .employee-item ul li {
+  font-size: 0.9rem;
+}
+
+
+.employee-info,
+.timesheet-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img.photo {
+  width: 100px;
+  height: 100px;
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.employee-info button,
+.view-toggle button,
+.timesheet-info button {
+  color: #007bff;
+  border-color: #007bff;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+
+
+.employee-info button:hover,
+.timesheet-info button:hover {
+  background-color: #007bff;
+  color: white;
+  transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+}
+
+
+.filter-container,
+.sort-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filter-container label,
+.sort-container label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.filter-container input,
+.sort-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 250px;
+}
+
+
+.sort-container select {
+  margin-bottom: 80px;
+}
+
+
+.sort-container button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
+
+.sort-container button:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+
+  .filter-container,
+  .sort-container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .filter-container input,
+  .sort-container select {
+    max-width: 100%;
+  }
+
+  .sort-container button {
+    margin-top: -80px;
+  }
+}
+
+
+/* arrow buttons */
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  -webkit-transition: background-color 0.3s ease-in-out, transform 0.2s;
+  -moz-transition: background-color 0.3s ease-in-out, transform 0.2s;
+  -ms-transition: background-color 0.3s ease-in-out, transform 0.2s;
+  -o-transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
