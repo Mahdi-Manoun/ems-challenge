@@ -75,7 +75,7 @@ export default function EmployeesPage() {
           </select>
 
           {/* Sorting by order */}
-          <button onClick={() => setSortOrder(sortOrder === "desc" ? "asc" : "asc")}>
+          <button onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}>
             {sortOrder === "asc" ? "🔼 Ascending" : "🔽 Descending"}
           </button>
         </div>
